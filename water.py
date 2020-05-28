@@ -24,7 +24,7 @@ def load(x,y,num):
 def physics():
     global screen
     for x in range(len(screen) -1, -1, -1):
-        for y in range(len(screen) -1, -1, -1):
+        for y in range(len(screen[x]) -1, -1, -1):
             if screen[x][y] in range(1,9):
                 if y < 99 and screen[x][y+1] not in (8,9):
                     screen[x][y+1] += 1
